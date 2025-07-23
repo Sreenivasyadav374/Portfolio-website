@@ -52,7 +52,7 @@ const About = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-fade-in-up bg-[length:200%_200%] animate-gradient-x">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-gray-500 to-gray-900 bg-clip-text text-transparent animate-fade-in-up">
             About Me
           </h2>
           <p
