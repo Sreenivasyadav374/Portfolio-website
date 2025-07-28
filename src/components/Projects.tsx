@@ -1,24 +1,26 @@
 import ProjectCard from "./ProjectCard";
-import ecommerceImage from "@/assets/project-ecommerce.jpg";
+import notes_img from "@/assets/notes_img.jpg";
 import dashboardImage from "@/assets/project-dashboard.jpg";
 import mobileImage from "@/assets/project-mobile.jpg";
 
 const Projects = () => {
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "A modern e-commerce website with shopping cart, user authentication, and payment integration. Built with React and styled with Tailwind CSS.",
-      image: ecommerceImage,
+     {
+      
+  title: "Smart Notes App",
+  description:
+    "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
+  image: notes_img,
       technologies: [
         "React",
         "TypeScript",
+        "MongoDB",
         "Tailwind CSS",
         "Stripe API",
         "Node.js",
       ],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
     },
     {
       title: "Analytics Dashboard",

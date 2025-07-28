@@ -23,11 +23,14 @@ const ProjectCard = ({
   return (
     <Card className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/30 via-white/10 to-white/0 dark:from-[#232946]/40 dark:via-[#18181b]/60 dark:to-[#18181b]/0 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(31,41,55,0.15)] hover:shadow-[0_12px_48px_0_rgba(99,102,241,0.18)] hover:border-primary/30 transition-all duration-500">
       {/* Image Section */}
-      <div className="aspect-video overflow-hidden relative">
+      <div className="aspect-video overflow-hidden relative rounded-2xl">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          style={{ imageRendering: 'auto' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
         <div className="absolute top-3 right-3 flex gap-2 z-10">
