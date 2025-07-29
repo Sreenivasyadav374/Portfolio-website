@@ -44,7 +44,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-secondary relative overflow-hidden"
+      className="py-20 bg-transparent relative overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-premium-float"></div>

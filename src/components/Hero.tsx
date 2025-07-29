@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import RotatingText from "./ui/rotatingtext";
+import RotatingText from "./ui/RotatingText"; // ✅ Your rotating text component
 import { Github, Linkedin, Mail } from "lucide-react";
 import TiltedCard from "./ui/TitledCard"; // ✅ Your card component
 
@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-transparent relative overflow-hidden"
     >
       {/* Floating Effects */}
       <div className="absolute top-[-150px] left-[-100px] w-[400px] h-[400px] bg-white/5 rounded-full blur-[150px] animate-float-slow z-0" />

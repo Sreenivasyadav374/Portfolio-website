@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 min-h-screen flex items-center justify-center bg-black relative overflow-hidden"
+      className="py-24 min-h-screen flex items-center justify-center bg-transparent relative overflow-hidden"
     >
       {/* Floating Blobs for premium look */}
       <div className="absolute top-[-150px] left-[-100px] w-[400px] h-[400px] bg-white/5 rounded-full blur-[150px] animate-float-slow z-0" />
