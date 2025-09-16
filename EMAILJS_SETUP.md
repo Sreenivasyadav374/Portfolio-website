@@ -42,9 +42,6 @@ Reply to: {{reply_to}}
 
 1. Go to **Account** → **General**
 2. Find your **Public Key**
-3. **Copy the Public Key** - you'll need this later
-
-## 5. Update Your Code
 
 In `src/components/Contact.tsx`, replace the placeholder values:
 
