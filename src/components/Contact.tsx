@@ -12,16 +12,55 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Using EmailJS service to send emails
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "srinivaspa374@gmail.com",
+      };
+
+      // Create mailto link as fallback
+      const subject = `Portfolio Contact from ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      const mailtoLink = `mailto:srinivaspa374@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Email client opened!",
+        description: "Your default email client should open with the message pre-filled. Please send the email to complete your message.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again or contact me directly at srinivaspa374@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -57,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">Email</h4>
-                  <p className="text-muted-foreground">hello@example.com</p>
+                  <p className="text-muted-foreground">srinivaspa374@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 group animate-fade-in-up" style={{ animationDelay: '500ms' }}>
@@ -115,9 +154,12 @@ const Contact = () => {
                 />
                 <Button 
                   type="submit" 
+                  disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden group shadow-glow hover:shadow-hover transition-all duration-500"
                 >
-                  <span className="relative z-10">Send Message</span>
+                  <span className="relative z-10">
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </Button>
               </form>
