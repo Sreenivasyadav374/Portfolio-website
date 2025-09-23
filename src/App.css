@@ -48,4 +48,27 @@
     transform: translateX(-50%);
   }
 }
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+@keyframes glow {
+  0% {
+    transform: translateX(-100%) rotate(15deg);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+    opacity: 0;
+  }
+}
+.animate-glow {
+  animation: glow 1s ease-in-out forwards;
+}
 

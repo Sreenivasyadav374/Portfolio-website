@@ -21,61 +21,63 @@ const ProjectCard = ({
   githubUrl,
 }: ProjectCardProps) => {
   return (
-    <Card className="group relative overflow-hidden rounded-xl border border-border bg-background/50 backdrop-blur-md transition-transform duration-500 hover:scale-[1.03] hover:shadow-projects-premium hover:border-primary/50 ease-projects-premium">
+    <Card className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/30 via-white/10 to-white/0 dark:from-[#232946]/40 dark:via-[#18181b]/60 dark:to-[#18181b]/0 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(31,41,55,0.15)] hover:shadow-[0_12px_48px_0_rgba(99,102,241,0.18)] hover:border-primary/30 transition-all duration-500">
       {/* Image Section */}
-      <div className="aspect-video overflow-hidden relative">
+      <div className="aspect-video overflow-hidden relative rounded-2xl">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 ease-projects-premium group-hover:scale-110"
+          className="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          style={{ imageRendering: 'auto' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
+        <div className="absolute top-3 right-3 flex gap-2 z-10">
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/70 dark:bg-black/60 shadow-md hover:bg-primary/80 hover:text-white text-gray-900 dark:text-white transition-all duration-300"
+            >
+              <ExternalLink size={18} />
+            </a>
+          )}
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/70 dark:bg-black/60 shadow-md hover:bg-primary/80 hover:text-white text-gray-900 dark:text-white transition-all duration-300"
+            >
+              <Github size={18} />
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Content Section */}
-      <CardContent className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors duration-300">
+      <CardContent className="p-5 pt-4 flex flex-col gap-2">
+        <h3 className="text-lg font-bold truncate bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent">
           {title}
         </h3>
 
-        <p className="text-muted-foreground mb-4 line-clamp-3">{description}</p>
+        <p className="text-white/90 text-sm line-clamp-2 mb-1">{description}</p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, index) => (
+        <div className="flex flex-wrap gap-1 mt-1">
+          {technologies.slice(0, 3).map((tech, index) => (
             <Badge
               key={index}
-              variant="secondary"
-              className="bg-secondary/50 text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+              className="bg-white/30 dark:bg-white/20 text-white border-none px-2 py-0.5 text-[11px] font-medium rounded-full"
             >
               {tech}
             </Badge>
           ))}
-        </div>
-
-        {/* Buttons Section */}
-        <div className="flex gap-3">
-          {liveUrl && (
-            <Button
-              size="sm"
-              className="relative overflow-hidden group/btn flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground shadow-projects-glow hover:shadow-projects-hover transition-all duration-500 ease-projects-premium transform hover:scale-105"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <ExternalLink size={16} />
-                Live Demo
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
-            </Button>
-          )}
-
-          {githubUrl && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2 border-border hover:border-primary/50 hover:bg-primary/10 hover:text-primary transition-all duration-500 ease-projects-premium transform hover:scale-105 hover:shadow-projects-glow"
-            >
-              <Github size={16} />
-              Code
-            </Button>
+          {technologies.length > 3 && (
+            <span className="text-white/70 text-xs ml-1">
+              +{technologies.length - 3}
+            </span>
           )}
         </div>
       </CardContent>

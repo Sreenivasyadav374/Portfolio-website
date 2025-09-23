@@ -10,9 +10,9 @@ import emailjs from '@emailjs/browser';
 // EmailJS Configuration
 // TODO: Replace these with your actual EmailJS credentials
 const EMAILJS_CONFIG = {
-  SERVICE_ID: 'your_service_id', // Replace with your EmailJS service ID
-  TEMPLATE_ID: 'your_template_id', // Replace with your EmailJS template ID
-  PUBLIC_KEY: 'your_public_key', // Replace with your EmailJS public key
+  SERVICE_ID: 'service_cbkgtrj',
+  TEMPLATE_ID: 'template_hx2akf9',
+  PUBLIC_KEY: 'fuxLpEku1oagxoBNt',
 };
 
 interface FormData {
@@ -31,7 +31,7 @@ const Contact = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
   
   const [errors, setErrors] = useState<FormErrors>({});
@@ -164,27 +164,39 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 bg-transparent relative overflow-hidden"
+    >
       {/* Animated background elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-morphing"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-premium-float"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-fade-in-up bg-[length:200%_200%] animate-gradient-x">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent animate-fade-in-up">
             Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+          <p
+            className="text-xl text-white/80 max-w-2xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: "200ms" }}
+          >
+            Have a project in mind? Let's discuss how we can work together to
+            bring your ideas to life.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="animate-slide-in-left">
-            <h3 className="text-2xl font-semibold mb-6 text-foreground">Let's Connect</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">
+              Let's Connect
+            </h3>
             <div className="space-y-6">
-              <div className="flex items-center space-x-4 group animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 animate-premium-glow">
+              <div
+                className="flex items-center space-x-4 group animate-fade-in-up"
+                style={{ animationDelay: "400ms" }}
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:animate-premium-glow">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -192,22 +204,32 @@ const Contact = () => {
                   <p className="text-muted-foreground">srinivaspa374@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 group animate-fade-in-up" style={{ animationDelay: '500ms' }}>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 animate-premium-glow">
+              <div
+                className="flex items-center space-x-4 group animate-fade-in-up"
+                style={{ animationDelay: "500ms" }}
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:animate-premium-glow">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">
+                    Phone
+                  </h4>
+                  <p className="text-muted-foreground">+91 8919110875</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 group animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 animate-premium-glow">
+              <div
+                className="flex items-center space-x-4 group animate-fade-in-up"
+                style={{ animationDelay: "600ms" }}
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:animate-premium-glow">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">
+                    Location
+                  </h4>
+                  <p className="text-muted-foreground">Gurgaon, Haryana India</p>
                 </div>
               </div>
             </div>
