@@ -1,16 +1,15 @@
 import ProjectCard from "./ProjectCard";
 import notes_img from "@/assets/notes_img.jpg";
-import dashboardImage from "@/assets/project-dashboard.jpg";
+import smartCalendar from "@/assets/calendar_1x.webp";
 import mobileImage from "@/assets/project-mobile.jpg";
 
 const Projects = () => {
   const projects = [
-     {
-      
-  title: "Smart Notes App",
-  description:
-    "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
-  image: notes_img,
+    {
+      title: "Smart Notes App",
+      description:
+        "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
+      image: notes_img,
       technologies: [
         "React",
         "TypeScript",
@@ -23,14 +22,21 @@ const Projects = () => {
       githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
     },
     {
-      title: "Analytics Dashboard",
+      title: "Smart Calendar",
       description:
-        "Interactive data visualization dashboard with real-time charts and analytics. Features responsive design and dark mode support.",
-      image: dashboardImage,
-      technologies: ["React", "Chart.js", "Firebase", "Material-UI", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
+      image: smartCalendar,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Framer Motion",
+        "IndexedDB",
+        "Google Calendar API",
+      ],
+      liveUrl: "https://smart-calendar-c.vercel.app/",
+      githubUrl: "https://github.com/Sreenivasyadav374/smart-calendar",
     },
+
     {
       title: "Task Management App",
       description:

@@ -43,7 +43,7 @@ const Hero = () => {
         {/* TiltedCard Left - 30% */}
         <div className="w-full md:w-[40%] flex justify-center mb-8 md:mb-0">
           <TiltedCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            imageSrc="/LinkedInPhoto.png"
             altText="Sreenivas Yadav - Portfolio"
             //captionText="Sreenivas Yadav - Portfolio"
             containerHeight="400px"
