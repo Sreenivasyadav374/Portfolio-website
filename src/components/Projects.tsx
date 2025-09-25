@@ -5,23 +5,7 @@ import mobileImage from "@/assets/project-mobile.jpg";
 
 const Projects = () => {
   const projects = [
-    {
-      title: "Smart Notes App",
-      description:
-        "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
-      image: notes_img,
-      technologies: [
-        "React",
-        "TypeScript",
-        "MongoDB",
-        "Tailwind CSS",
-        "Stripe API",
-        "Node.js",
-      ],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
-    },
-    {
+     {
       title: "Smart Calendar",
       description:
         "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
@@ -35,8 +19,23 @@ const Projects = () => {
       ],
       liveUrl: "https://smart-calendar-c.vercel.app/",
       githubUrl: "https://github.com/Sreenivasyadav374/smart-calendar",
+    }
+    ,{
+      title: "Smart Notes App",
+      description:
+        "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
+      image: notes_img,
+      technologies: [
+        "React",
+        "TypeScript",
+        "MongoDB",
+        "Tailwind CSS",
+        "Stripe API",
+        "Node.js",
+      ],
+      liveUrl: "https://note-craft-suite.vercel.app/",
+      githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
     },
-
     {
       title: "Task Management App",
       description:
