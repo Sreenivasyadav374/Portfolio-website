@@ -33,7 +33,7 @@ const Projects = () => {
         "Stripe API",
         "Node.js",
       ],
-      liveUrl: "https://note-craft-suite.vercel.app/",
+      liveUrl: "https://note-craft-suitee.vercel.app/",
       githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
     },
     {
