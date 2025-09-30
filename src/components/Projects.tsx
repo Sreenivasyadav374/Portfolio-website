@@ -17,7 +17,7 @@ const Projects = () => {
         "IndexedDB",
         "Google Calendar API",
       ],
-      liveUrl: "https://smart-calendar-c.vercel.app/",
+      liveUrl: "https://smart-calendar-sreenivasyadav374s-projects.vercel.app/",
       githubUrl: "https://github.com/Sreenivasyadav374/smart-calendar",
     }
     ,{
