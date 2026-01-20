@@ -59,7 +59,7 @@ const About = () => {
             className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
-            I'm a passionate frontend developer with 1+ years of experience
+            I'm a passionate frontend developer with 2+ years of experience
             creating web applications that combine beautiful design with robust
             functionality. I love turning ideas into interactive digital
             experiences.
