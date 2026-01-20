@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import notes_img from "@/assets/notes_img.jpg";
-import smartCalendar from "@/assets/calendar_1x.webp";
+import chatbotpreview from "@/assets/chatbot.jpeg";
 import mobileImage from "@/assets/project-mobile.jpg";
 
 const Projects = () => {
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Smart Calendar",
       description:
         "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
-      image: smartCalendar,
+      image: chatbotpreview,
       technologies: [
         "React",
         "TypeScript",
