@@ -5,22 +5,7 @@ import mobileImage from "@/assets/project-mobile.jpg";
 
 const Projects = () => {
   const projects = [
-     {
-      title: "Smart Calendar",
-      description:
-        "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
-      image: smartCalendar,
-      technologies: [
-        "React",
-        "TypeScript",
-        "Framer Motion",
-        "IndexedDB",
-        "Google Calendar API",
-      ],
-      liveUrl: "https://smart-calendar-sreenivasyadav374s-projects.vercel.app/",
-      githubUrl: "https://github.com/Sreenivasyadav374/smart-calendar",
-    }
-    ,{
+    {
       title: "Smart Notes App",
       description:
         "A full-stack notes application with create, edit, and delete functionality. Built with React for the frontend and Node.js, Express, and MongoDB for the backend. Users can save notes persistently with a responsive UI and smooth user experience.",
@@ -51,6 +36,21 @@ const Projects = () => {
       liveUrl: "https://streaming-chatbot-xi.vercel.app/",
       githubUrl: "https://github.com/Sreenivasyadav374/streaming-chatbot",
     },
+     {
+      title: "Smart Calendar",
+      description:
+        "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
+      image: smartCalendar,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Framer Motion",
+        "IndexedDB",
+        "Google Calendar API",
+      ],
+      liveUrl: "https://smart-calendar-sreenivasyadav374s-projects.vercel.app/",
+      githubUrl: "https://github.com/Sreenivasyadav374/smart-calendar",
+    }
   ];
 
   return (
