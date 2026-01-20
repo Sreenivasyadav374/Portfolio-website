@@ -37,19 +37,19 @@ const Projects = () => {
       githubUrl: "https://github.com/Sreenivasyadav374/note-craft-suite",
     },
     {
-      title: "Task Management App",
+      title: "Real-Time AI Chatbot with Streaming Responses",
       description:
-        "Mobile-first task management application with drag & drop functionality, team collaboration, and progress tracking.",
+        "A real-time AI chatbot built with Next.js that streams responses token-by-token for an ultra-smooth conversational experience.",
       image: mobileImage,
       technologies: [
-        "React Native",
+        "Next.js 14",
         "TypeScript",
-        "SQLite",
-        "Redux Toolkit",
-        "React Navigation",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "OpenRouter API",
       ],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://streaming-chatbot-xi.vercel.app/",
+      githubUrl: "https://github.com/Sreenivasyadav374/streaming-chatbot",
     },
   ];
 
