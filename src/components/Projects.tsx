@@ -1,7 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import notes_img from "@/assets/notes_img.jpg";
 import chatbotpreview from "@/assets/chatbot.jpeg";
-import mobileImage from "@/assets/project-mobile.jpg";
+import smartcalendar from '@/assets/calendar_3x.webp'
 
 const Projects = () => {
   const projects = [
@@ -25,7 +25,7 @@ const Projects = () => {
       title: "Real-Time AI Chatbot with Streaming Responses",
       description:
         "A real-time AI chatbot built with Next.js that streams responses token-by-token for an ultra-smooth conversational experience.",
-      image: mobileImage,
+      image: chatbotpreview,
       technologies: [
         "Next.js 14",
         "TypeScript",
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Smart Calendar",
       description:
         "AI-powered smart calendar and task management app with Google Calendar integration, drag-and-drop events, dark/light theme, and AI task suggestions.",
-      image: chatbotpreview,
+      image: smartcalendar,
       technologies: [
         "React",
         "TypeScript",
